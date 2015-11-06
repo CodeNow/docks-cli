@@ -28,7 +28,6 @@
     "cli-table": "^0.3.1",
     "colors": "^1.1.2",
     "consul": "^0.18.1",
-    "dogapi": "^1.0.6",
     "minimist": "^1.2.0",
     "printf": "^0.2.3",
     "request": "^2.65.0",
