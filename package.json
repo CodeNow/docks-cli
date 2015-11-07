@@ -1,6 +1,6 @@
 {
   "name": "docks-cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "An easy-to-use internal CLI for managing customer docks.",
   "main": "lib/cli.js",
   "scripts": {
