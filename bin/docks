@@ -1,3 +1,27 @@
-#!/usr/bin/env node
-'use strict';
-require('../lib/cli')();
+#!/bin/sh
+nvmscript=""
+if command -v brew 2> /dev/null 1>&2; then
+  nvmscript="$(brew --prefix nvm)/nvm.sh"
+fi
+if [ -e $HOME/.nvm/nvm.sh ]; then
+  nvmscript="$HOME/.nvm/nvm.sh"
+fi
+
+if [ $nvmscript = "" ]; then
+  echo "Cannot find Node 4 :("
+  exit 1
+fi
+
+. $nvmscript
+
+node=$(nvm which 4)
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+exec "$node" "$DIR/_docks.js" "$@"
