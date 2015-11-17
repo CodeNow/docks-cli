@@ -28,6 +28,7 @@
     "colors": "^1.1.2",
     "minimist": "^1.2.0",
     "node-emoji": "^1.0.4",
+    "node-notifier": "^4.3.1",
     "printf": "^0.2.3",
     "redis": "^2.3.0",
     "request": "^2.65.0",
