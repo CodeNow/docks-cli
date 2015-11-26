@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ $DEVOPS_SCRIPTS_PATH = "" || ! -e $DEVOPS_SCRIPTS_PATH ]]; then
   echo [Warning] If you don't set DEVOPS_SCRIPTS_PATH, you're gonna have a bad time...
