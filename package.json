@@ -1,6 +1,6 @@
 {
   "name": "docks-cli",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "An easy-to-use internal CLI for managing customer docks.",
   "main": "lib/cli.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "printf": "^0.2.3",
     "redis": "^2.3.0",
     "request": "^2.65.0",
-    "runnable-hermes": "^6.2.1",
+    "runnable-hermes": "6.2.1",
     "trim": "0.0.1"
   }
 }
