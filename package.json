@@ -4,7 +4,8 @@
   "description": "An easy-to-use internal CLI for managing customer docks.",
   "main": "lib/cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-feature": "cucumberjs",
+    "test": "npm run test-feature"
   },
   "bin": {
     "docks": "./bin/docks"
@@ -34,5 +35,9 @@
     "request": "^2.65.0",
     "runnable-hermes": "6.2.1",
     "trim": "0.0.1"
+  },
+  "devDependencies": {
+    "cucumber": "^0.9.4",
+    "express": "^4.13.4"
   }
 }
