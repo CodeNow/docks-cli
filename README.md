@@ -1,3 +1,6 @@
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Build Status](https://travis-ci.com/CodeNow/docks-cli.svg?token=CEnbe3bPEVFTjYa2MCtJ&branch=master)](https://travis-ci.com/CodeNow/docks-cli)
+
 # docks-cli
 An easy-to-use internal CLI for managing docks.
 

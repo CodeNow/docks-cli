@@ -20,7 +20,7 @@ module.exports = function () {
       .catch(function (err) {
         this.lastRun.error = err
       })
-  });
+  })
 
   this.Then(/^the output should contain:$/, function (expectedOutput) {
     return Promise.try(function () {
@@ -31,7 +31,7 @@ module.exports = function () {
           'Got:\n' + actualOutput + '\n')
       }
     }.bind(this))
-  });
+  })
 
   this.Then(/^the exit status should be (\d+)$/, function (expectedCode) {
     return Promise.try(function () {
@@ -44,7 +44,7 @@ module.exports = function () {
           'Got: ' + actualCode + '\n')
       }
     }.bind(this))
-  });
+  })
 
   this.Given(/^the following docks:$/, function (table) {
     return Promise.try(function () {
@@ -57,5 +57,5 @@ module.exports = function () {
         }
       })
     }.bind(this))
-  });
+  })
 }

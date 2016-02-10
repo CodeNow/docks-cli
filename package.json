@@ -4,6 +4,8 @@
   "description": "An easy-to-use internal CLI for managing customer docks.",
   "main": "lib/cli.js",
   "scripts": {
+    "format": "standard-format --write",
+    "lint": "standard --verbose",
     "test-feature": "cucumberjs",
     "test": "npm run test-feature"
   },
@@ -38,6 +40,8 @@
   },
   "devDependencies": {
     "cucumber": "^0.9.4",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "standard": "^6.0.4",
+    "standard-format": "^2.1.0"
   }
 }
