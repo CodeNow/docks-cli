@@ -1,2 +1,2 @@
-'use strict';
-require('../lib/cli.js')();
+'use strict'
+require('../lib/cli.js')()
