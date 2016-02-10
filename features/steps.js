@@ -8,7 +8,7 @@ var executablePath = path.join(__dirname, '..', 'bin', 'docks')
 
 module.exports = function () {
   this.When(/^I run `docks (.+)`$/, function (args) {
-		this.lastRun = {}
+    this.lastRun = {}
     return execFile(executablePath, args.split(' '))
       .bind(this)
       .spread(function (stdout, stderr) {
@@ -46,16 +46,16 @@ module.exports = function () {
     }.bind(this))
   });
 
-	this.Given(/^the following docks:$/, function (table) {
-		return Promise.try(function () {
-			this.availableDocks = table.hashes().map(function (o) {
-				return {
-					numContainers: 0,
-					numBuilds: 0,
-					host: 'http://' + o.ipAddress + ':4242',
+  this.Given(/^the following docks:$/, function (table) {
+    return Promise.try(function () {
+      this.availableDocks = table.hashes().map(function (o) {
+        return {
+          numContainers: 0,
+          numBuilds: 0,
+          host: 'http://' + o.ipAddress + ':4242',
           tags: o.organization + ',build,run'
-				}
-			})
-		}.bind(this))
-	});
+        }
+      })
+    }.bind(this))
+  });
 }
