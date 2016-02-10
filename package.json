@@ -37,6 +37,7 @@
     "trim": "0.0.1"
   },
   "devDependencies": {
-    "cucumber": "^0.9.4"
+    "cucumber": "^0.9.4",
+    "express": "^4.13.4"
   }
 }

@@ -8,6 +8,7 @@ var executablePath = path.join(__dirname, '..', 'bin', 'docks')
 
 module.exports = function () {
   this.When(/^I run `docks (.+)`$/, function (args) {
+		this.lastRun = {}
     return execFile(executablePath, args.split(' '))
       .bind(this)
       .spread(function (stdout, stderr) {
@@ -23,7 +24,7 @@ module.exports = function () {
 
   this.Then(/^the output should contain:$/, function (expectedOutput) {
     return Promise.try(function () {
-      var actualOutput = this.lastRun.stdout.toString()
+      var actualOutput = this.lastRun.stdout
 
       if (actualOutput.indexOf(expectedOutput) === -1) {
         throw new Error('Expected output to contain the following:\n' + expectedOutput + '\n' +
@@ -44,4 +45,17 @@ module.exports = function () {
       }
     }.bind(this))
   });
+
+	this.Given(/^the following docks:$/, function (table) {
+		return Promise.try(function () {
+			this.availableDocks = table.hashes().map(function (o) {
+				return {
+					numContainers: 0,
+					numBuilds: 0,
+					host: 'http://' + o.ipAddress + ':4242',
+          tags: o.organization + ',build,run'
+				}
+			})
+		}.bind(this))
+	});
 }
