@@ -8,7 +8,7 @@ var executablePath = path.join(__dirname, '..', 'bin', 'docks')
 
 module.exports = function () {
   this.When(/^I successfully run `docks (.+)`$/, function (args) {
-    return execFile(executablePath, args.split(' '), {})
+    return execFile(executablePath, args.split(' '))
       .bind(this)
       .spread(function (stdout, stderr) {
         this.lastRun = {
