@@ -7,7 +7,7 @@ var execFile = Promise.promisify(require('child_process').execFile, { multiArgs:
 var executablePath = path.join(__dirname, '..', 'bin', 'docks')
 
 module.exports = function () {
-  this.When(/^I successfully run `docks (.+)`$/, function (args) {
+  this.When(/^I run `docks (.+)`$/, function (args) {
     return execFile(executablePath, args.split(' '))
       .bind(this)
       .spread(function (stdout, stderr) {

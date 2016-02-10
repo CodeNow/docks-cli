@@ -1,7 +1,7 @@
 Feature: Help
 
   Scenario: Display docks help information
-    When I successfully run `docks help`
+    When I run `docks help`
     Then the output should contain:
     """
     Usage: docks <action> [options...]
