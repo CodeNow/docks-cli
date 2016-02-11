@@ -12,6 +12,6 @@ program
   .command('list', 'list available docks')
   // .command('logs', 'get logs from a docks')
   .command('remove', 'remove a dock from rotation')
-  // .command('unhealthy', 'mark a dock as unhealthy')
+  .command('unhealthy', 'mark a dock as unhealthy')
   // .command('weave', 'I do not know what this does')
   .parse(process.argv)
