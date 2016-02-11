@@ -2,5 +2,5 @@
 
 require('../lib/util/unhandled-catcher')()
 
-require('../lib/actions/list')()
+require('../lib/actions/asg-scale-out')()
   .then(console.log.bind(console))
