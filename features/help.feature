@@ -15,3 +15,10 @@ Feature: Help
     help [cmd]  display help for [cmd]
     """
     And the exit status should be 0
+
+  Scenario: Get docks version
+    When I run `docks --version`
+    Then the output should match:
+    """
+    \d+\.\d+\.\d+
+    """

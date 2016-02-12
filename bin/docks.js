@@ -1,6 +1,6 @@
 'use strict'
 var program = require('commander')
-var version = require('../package.json').Version
+var version = require('../package.json').version
 
 program
   .version(version)
