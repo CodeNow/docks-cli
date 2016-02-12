@@ -22,12 +22,25 @@ module.exports = function () {
       })
   })
 
-  this.Then(/^the output should contain:$/, function (expectedOutput) {
+  this.Then(/^the output should( not)? contain:$/, function (not, expectedOutput) {
     return Promise.try(function () {
       var actualOutput = this.lastRun.stdout
 
-      if (actualOutput.indexOf(expectedOutput) === -1) {
+      var actualIndex = actualOutput.indexOf(expectedOutput)
+      if (not ? (actualIndex !== -1) : (actualIndex === -1)) {
         throw new Error('Expected output to contain the following:\n' + expectedOutput + '\n' +
+          'Got:\n' + actualOutput + '\n')
+      }
+    }.bind(this))
+  })
+
+  this.Then(/^the output should match:$/, function (expectedRegExp) {
+    return Promise.try(function () {
+      var actualOutput = this.lastRun.stdout
+      expectedRegExp = new RegExp(expectedRegExp)
+
+      if (!expectedRegExp.test(actualOutput)) {
+        throw new Error('Expected output to match the following:\n' + expectedRegExp + '\n' +
           'Got:\n' + actualOutput + '\n')
       }
     }.bind(this))
