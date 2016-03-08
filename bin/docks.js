@@ -11,6 +11,5 @@ program
   .command('kill', 'kill (terminate) a dock')
   .command('list', 'list available docks')
   .command('logs', 'get logs from a docks')
-  .command('remove', 'remove a dock from rotation')
   .command('unhealthy', 'mark a dock as unhealthy')
   .parse(process.argv)
