@@ -31,6 +31,7 @@
     "colors": "^1.1.2",
     "commander": "tj/commander.js#master",
     "dockerode": "^2.2.9",
+    "find-open-port": "^1.0.0",
     "minimist": "^1.2.0",
     "moment": "^2.11.2",
     "mongodb": "^2.1.4",
@@ -40,7 +41,8 @@
     "request": "^2.65.0",
     "runnable-hermes": "6.2.1",
     "swarmerode": "^0.2.0",
-    "trim": "0.0.1"
+    "trim": "0.0.1",
+    "tunnel-ssh": "^2.1.1"
   },
   "devDependencies": {
     "cucumber": "^0.9.4",
