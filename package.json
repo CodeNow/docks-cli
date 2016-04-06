@@ -30,14 +30,15 @@
     "cli-table": "^0.3.1",
     "colors": "^1.1.2",
     "commander": "tj/commander.js#master",
+    "dockerode": "^2.2.9",
     "minimist": "^1.2.0",
     "moment": "^2.11.2",
     "mongodb": "^2.1.4",
     "node-emoji": "^1.0.4",
-    "printf": "^0.2.3",
     "redis": "^2.3.0",
     "request": "^2.65.0",
     "runnable-hermes": "6.2.1",
+    "swarmerode": "^0.2.0",
     "trim": "0.0.1"
   },
   "devDependencies": {
