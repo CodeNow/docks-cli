@@ -38,7 +38,7 @@
     "redis": "^2.3.0",
     "request": "^2.65.0",
     "runnable-hermes": "6.2.1",
-    "swarmerode": "2.0.0",
+    "swarmerode": "2.2.4",
     "trim": "0.0.1"
   },
   "devDependencies": {
