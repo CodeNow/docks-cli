@@ -38,7 +38,7 @@
     "node-emoji": "^1.0.4",
     "redis": "^2.3.0",
     "request": "^2.65.0",
-    "ponos": "^5.1.0",
+    "ponos": "^5.3.0",
     "swarmerode": "^3.0.0",
     "trim": "0.0.1"
   },
